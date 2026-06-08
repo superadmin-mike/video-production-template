@@ -31,36 +31,47 @@
   }, { passive: true });
 
   /* ── Vimeo Hero Video ── */
-  const container = document.getElementById('hero-vimeo');
-  const iframe = document.createElement('iframe');
-  iframe.src = 'https://player.vimeo.com/video/1197897448?autoplay=1&loop=1&badge=0&byline=0&portrait=0&title=0&controls=0';
-  iframe.frameborder = '0';
-  iframe.allow = 'autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share; xr-spatial-tracking';
-  iframe.allowFullscreen = true;
-  container.appendChild(iframe);
-
-  const player = new Vimeo.Player(iframe);
-
-  /* ── Mute toggle with Vimeo API ── */
-  const muteBtn = document.getElementById('muteBtn');
-  const muteIcon = document.getElementById('muteIcon');
-  const muteLabel = document.getElementById('muteLabel');
-
-  // Set initial volume to 0 (muted)
-  player.setVolume(0);
-
-  muteBtn.addEventListener('click', async () => {
-    const vol = await player.getVolume();
-    if (vol > 0) {
-      await player.setVolume(0);
-      muteIcon.textContent = '🔇';
-      muteLabel.textContent = 'Sonido';
-    } else {
-      await player.setVolume(0.5);
-      muteIcon.textContent = '🔊';
-      muteLabel.textContent = 'Silencio';
+  function initVimeoVideo() {
+    if (typeof Vimeo === 'undefined') {
+      // Vimeo API not loaded yet, try again
+      setTimeout(initVimeoVideo, 100);
+      return;
     }
-  });
+
+    const container = document.getElementById('hero-vimeo');
+    const iframe = document.createElement('iframe');
+    iframe.src = 'https://player.vimeo.com/video/1197897448?autoplay=1&loop=1&badge=0&byline=0&portrait=0&title=0&controls=0';
+    iframe.frameborder = '0';
+    iframe.allow = 'autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share; xr-spatial-tracking';
+    iframe.allowFullscreen = true;
+    container.appendChild(iframe);
+
+    const player = new Vimeo.Player(iframe);
+
+    /* ── Mute toggle with Vimeo API ── */
+    const muteBtn = document.getElementById('muteBtn');
+    const muteIcon = document.getElementById('muteIcon');
+    const muteLabel = document.getElementById('muteLabel');
+
+    // Set initial volume to 0 (muted)
+    player.setVolume(0);
+
+    muteBtn.addEventListener('click', async () => {
+      const vol = await player.getVolume();
+      if (vol > 0) {
+        await player.setVolume(0);
+        muteIcon.textContent = '🔇';
+        muteLabel.textContent = 'Sonido';
+      } else {
+        await player.setVolume(0.5);
+        muteIcon.textContent = '🔊';
+        muteLabel.textContent = 'Silencio';
+      }
+    });
+  }
+
+  // Initialize Vimeo when ready
+  initVimeoVideo();
 
   /* ── Scroll reveal ── */
   const obs = new IntersectionObserver(entries => {
