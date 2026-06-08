@@ -1,0 +1,145 @@
+{
+  "client": {
+    "name": "TEMPLUM",
+    "tagline": "Video Production · México",
+    "yearsActive": "10+",
+    "description": "Leading video production service in Mexico, specializing in crafting compelling visual stories that resonate with your audience.",
+    "descriptionLong": "From concept to completion, our dedicated team of professionals is committed to delivering high-quality video content that captivates and engages.",
+    "whatsappNumber": "+525512345678",
+    "email": "hola@templum.tv",
+    "phone": "+525512345679",
+    "linkedin": "https://linkedin.com/company/templum",
+    "instagram": "https://instagram.com/templum.tv"
+  },
+  "colors": {
+    "primary": "#B85C3C",
+    "secondary": "#1B8B8B",
+    "accent": "#E67E22"
+  },
+  "hero": {
+    "videoId": "",
+    "fallbackGradient": "linear-gradient(135deg,#1a0a05 0%,#080808 40%,#051a1a 100%)"
+  },
+  "about": {
+    "label": "Quiénes somos",
+    "title": "Producción de video<br>de clase mundial.",
+    "description1": "Somos el puente entre tu marca y <strong>audiencias de millones.</strong> En 10+ años producimos comerciales, videos corporativos y contenido digital para las marcas más exigentes.",
+    "description2": "Conectamos tu inversión en producción con plataformas globales y amplificadores digitales para que cada proyecto sea un activo que vive mucho más allá del lanzamiento.",
+    "stats": [
+      { "number": "10+", "label": "Años de experiencia en México y LATAM" },
+      { "number": "300+", "label": "Producciones ejecutadas" },
+      { "number": "3", "label": "Tipos de servicio: Video, Photography, Drone" },
+      { "number": "∞", "label": "Alcance global vía streaming y medios" }
+    ]
+  },
+  "clients": [
+    "Volkswagen",
+    "Samsung",
+    "Kotex",
+    "GNC",
+    "Nutrilite",
+    "Beefeater",
+    "Birot",
+    "Canon",
+    "Sony",
+    "Adobe",
+    "Nikon",
+    "DJI",
+    "Audi",
+    "BMW"
+  ],
+  "services": [
+    {
+      "number": "01",
+      "title": "Video Production",
+      "description": "Commercials, corporate videos, digital content. From concept to final cut with cutting-edge technology."
+    },
+    {
+      "number": "02",
+      "title": "Photography",
+      "description": "Professional photo shoots that capture attention and communicate your brand's message with precision and style."
+    },
+    {
+      "number": "03",
+      "title": "Drone Services",
+      "description": "Aerial filming for corporate videos, commercials, events, and advertising. We take your productions to new heights."
+    }
+  ],
+  "portfolio": [
+    {
+      "id": 1,
+      "title": "Volkswagen<br>Global Campaign",
+      "client": "Volkswagen · Commercial",
+      "tag": "Commercial",
+      "videoId": "",
+      "colorsIndex": 0
+    },
+    {
+      "id": 2,
+      "title": "Samsung<br>Product Launch",
+      "client": "Samsung · Product",
+      "tag": "Product Launch",
+      "videoId": "",
+      "colorsIndex": 1
+    },
+    {
+      "id": 3,
+      "title": "GNC<br>Brand Film",
+      "client": "GNC · Corporate",
+      "tag": "Corporate",
+      "videoId": "",
+      "colorsIndex": 2
+    },
+    {
+      "id": 4,
+      "title": "Kotex<br>Digital Campaign",
+      "client": "Kotex · Digital",
+      "tag": "Digital",
+      "videoId": "",
+      "colorsIndex": 3
+    },
+    {
+      "id": 5,
+      "title": "Beefeater<br>Advertising",
+      "client": "Beefeater · Spirits",
+      "tag": "Advertising",
+      "videoId": "",
+      "colorsIndex": 4
+    },
+    {
+      "id": 6,
+      "title": "Nutrilite<br>Brand Story",
+      "client": "Nutrilite · Storytelling",
+      "tag": "Storytelling",
+      "videoId": "",
+      "colorsIndex": 5
+    },
+    {
+      "id": 7,
+      "title": "Drone Showcase<br>Aerial Reel",
+      "client": "Multi-client · Showcase",
+      "tag": "Drone Footage",
+      "videoId": "",
+      "colorsIndex": 0
+    }
+  ],
+  "amplify": {
+    "title": "Premium Quality.<br>Scalable Delivery.",
+    "description": "Your production is only as good as its reach. We deliver stunning visual content and amplify it across global platforms and channels.",
+    "partners": [
+      "YouTube",
+      "Vimeo",
+      "Netflix",
+      "Amazon Prime",
+      "Spotify",
+      "TikTok",
+      "Instagram",
+      "LinkedIn"
+    ]
+  },
+  "contact": {
+    "label": "Contacto",
+    "title": "Let's create<br>something<br>amazing.",
+    "description": "Tell us about your project.<br>We respond within 24 hours."
+  }
+}

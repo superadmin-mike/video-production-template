@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="pageTitle">Video Production Agency</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+<script>
+  // Load data.json early
+  fetch('data.json')
+    .then(r => r.json())
+    .then(data => {
+      document.documentElement.setAttribute('data-client', data.client.name.toLowerCase());
+      document.title = `${data.client.name} — Video Production`;
+    });
+</script>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursor-ring"></div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="nav-logo" id="navLogo">TEMPLUM</a>
+  <ul class="nav-links">
+    <li><a href="#work">Work</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Let's Talk →</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <video
+    class="hero-video"
+    id="heroVideo"
+    autoplay
+    muted
+    loop
+    playsinline
+    poster=""
+  ></video>
+
+  <div class="hero-fallback" id="heroFallback"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <div class="hero-wordmark" id="wordmark"></div>
+    <p class="hero-tagline-small" id="heroTagline">Video Production · México</p>
+  </div>
+
+  <div class="hero-scroll" aria-hidden="true">
+    <div class="scroll-bar"></div>
+    <span>Scroll</span>
+  </div>
+
+  <button class="hero-mute" id="muteBtn" aria-label="Toggle video sound">
+    <span class="mute-icon" id="muteIcon">🔇</span>
+    <span id="muteLabel">Sound</span>
+  </button>
+</section>
+
+<!-- TICKER -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track" id="tickerTrack">
+    <span class="ticker-item">Video Production</span>
+    <span class="ticker-item">·</span>
+    <span class="ticker-item">Photography</span>
+    <span class="ticker-item">·</span>
+    <span class="ticker-item">Drone Services</span>
+    <span class="ticker-item">·</span>
+    <span class="ticker-item">Commercial</span>
+    <span class="ticker-item">·</span>
+    <span class="ticker-item">Corporate</span>
+    <span class="ticker-item">·</span>
+    <span class="ticker-item">Digital Content</span>
+    <span class="ticker-item">·</span>
+    <span class="ticker-item">Aerial Footage</span>
+    <span class="ticker-item">·</span>
+    <span class="ticker-item">Video Production</span>
+    <span class="ticker-item">·</span>
+    <span class="ticker-item">Photography</span>
+    <span class="ticker-item">·</span>
+    <span class="ticker-item">Drone Services</span>
+    <span class="ticker-item">·</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div>
+    <div class="section-label label-primary reveal" id="aboutLabel">About Us</div>
+    <h2 class="section-title reveal reveal-delay-1" id="aboutTitle"></h2>
+    <p class="about-body reveal reveal-delay-2" id="aboutDesc1"></p>
+    <p class="about-body reveal reveal-delay-3" id="aboutDesc2" style="margin-top:20px; font-size:15px;"></p>
+  </div>
+  <div>
+    <div class="stat-grid reveal reveal-delay-1" id="statGrid"></div>
+  </div>
+</section>
+
+<!-- CLIENTS -->
+<div class="clients-section">
+  <p class="clients-label">Brands that trust us</p>
+  <div class="clients-track-wrap">
+    <div class="clients-track" id="clientsTrack"></div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="services-header">
+    <div>
+      <div class="section-label label-secondary reveal" id="servicesLabel">Services</div>
+      <h2 class="section-title reveal reveal-delay-1">What<br>we do.</h2>
+    </div>
+    <p class="services-sub reveal reveal-delay-2">
+      Each service is designed to amplify the next. Production, creative direction, and delivery under one roof.
+    </p>
+  </div>
+  <div class="services-grid" id="servicesGrid"></div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="work">
+  <div class="work-header">
+    <div>
+      <div class="section-label label-accent reveal">Projects</div>
+      <h2 class="section-title reveal reveal-delay-1">Case<br>studies.</h2>
+    </div>
+    <a href="#contact" class="btn-ghost reveal reveal-delay-2" style="margin-bottom:12px;">View all →</a>
+  </div>
+  <div class="work-grid" id="workGrid"></div>
+</section>
+
+<!-- AMPLIFICATION -->
+<section id="amplify">
+  <div class="amplify-band"></div>
+  <div class="amplify-band-overlay"></div>
+  <div class="amplify-bg-word" aria-hidden="true">AMPLIFY</div>
+  <div class="amplify-content">
+    <h2 class="amplify-title" id="amplifyTitle"></h2>
+    <div>
+      <p class="amplify-body" id="amplifyDesc"></p>
+      <div class="amplify-partners" id="amplifyPartners"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div>
+    <div class="section-label label-accent reveal">Contact</div>
+    <h2 class="section-title reveal reveal-delay-1" id="contactTitle"></h2>
+    <p class="contact-body reveal reveal-delay-2" id="contactDesc"></p>
+    <div class="contact-channels reveal reveal-delay-3" id="contactChannels"></div>
+  </div>
+
+  <div class="reveal reveal-delay-2">
+    <form onsubmit="return false;">
+      <div class="form-group">
+        <label class="form-label">Name</label>
+        <input type="text" class="form-input" placeholder="Your full name">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Company</label>
+        <input type="text" class="form-input" placeholder="Company name">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-input" placeholder="your@company.com">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Project Type</label>
+        <select class="form-select">
+          <option value="" disabled selected>Select a category</option>
+          <option>Video Production</option>
+          <option>Photography</option>
+          <option>Drone Services</option>
+          <option>Full Production</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Tell us about your project</label>
+        <textarea class="form-textarea" placeholder="Describe your production needs..."></textarea>
+      </div>
+      <button type="submit" class="form-submit">
+        Send message →
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo" id="footerLogo">TEMPLUM</div>
+  <ul class="footer-links">
+    <li><a href="#work">Work</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="https://instagram.com" id="footerIg">Instagram</a></li>
+  </ul>
+  <span class="footer-copy" id="footerCopy">© 2025. Video Production.</span>
+</footer>
+
+<link rel="stylesheet" href="css/animations.css">
+<script src="js/cursor.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
