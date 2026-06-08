@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
+<script src="https://player.vimeo.com/api/player.js"></script>
 </head>
 <body>
 
@@ -28,26 +29,8 @@
 
 <!-- ── HERO — full screen video ── -->
 <section class="hero">
-  <!--
-    INSTRUCCIÓN: Reemplaza el src del <video> con la URL del reel demo.
-    Ejemplo: <video ... src="https://tu-cdn.com/reel-faraway.mp4">
-    También acepta <source type="video/mp4"> dentro del tag.
-  -->
-  <video
-    class="hero-video"
-    id="heroVideo"
-    autoplay
-    muted
-    loop
-    playsinline
-    poster=""
-    aria-label="Reel Faraway — Event Marketing"
-  >
-    <!-- src: reemplazar con video real -->
-    <!-- <source src="URL_DEL_VIDEO_AQUI" type="video/mp4"> -->
-
-    <!-- Fallback: colored gradient while no video -->
-  </video>
+  <!-- Vimeo hero video container -->
+  <div id="hero-vimeo" class="hero-video-container"></div>
 
   <!-- Fallback background when no video src -->
   <div style="position:absolute;inset:0;background:linear-gradient(135deg,#1a0a05 0%,#080808 40%,#051a1a 100%);z-index:0;"></div>
